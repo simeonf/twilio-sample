@@ -1,10 +1,9 @@
 <?php
 header("content-type: text/xml");
 if(@$_POST['Digits'] == '1'){
-  # 209 471-8059 Dianne dianaringer@yahoo.com
   // Make a phone call
   $c = curl_init(); 
-  $password = '0144837eed01a90796f261ce74cd1bf1';
+  $password = '0144837eed01a90796f261ce74cd1bf1'; // Use your own twilio auth token, i regenerated mine so this won't work
   curl_setopt($c, CURLOPT_URL, "https://api.twilio.com/2010-04-01/Accounts/ACf19be4dd11ab1ac1065f73d9047d1e9d/Calls");
   curl_setopt($c, CURLOPT_USERPWD,  "ACf19be4dd11ab1ac1065f73d9047d1e9d:" . $password);
   curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
