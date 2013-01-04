@@ -10,8 +10,8 @@ if(@$_POST['Digits'] == '1'){
   curl_setopt($c, CURLOPT_POST, true);
 
   $data = array(
-    'From' => '209 846-2151',
-    'To' => '209 548-9938',
+    'From' => '209 111-1111', # your number here
+    'To' => '209 111-1111', # target number here, must be an authenticated number if using Twilio Trial account
     'Url' => 'http://simeonfranklin.com/masscall/play.php?url=' . $_GET['url'],
     'Method' => 'GET',
   );
